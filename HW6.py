@@ -3,7 +3,7 @@
 
 
 def transformIf(items, F, P):
-    items[:] = [F(i) for i in items if P(i)]
+    items[:] = [F(i) if P(i) else i for i in items]
 
 
 L1 = [-3, -2, -1, 0, 1, 2, 3]
